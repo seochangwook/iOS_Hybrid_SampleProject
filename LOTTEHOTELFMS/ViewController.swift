@@ -84,8 +84,11 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
     }
     
     @IBAction func jscallbutton(_ sender: UIButton) {
+        /// Javascript Function Setting
+        let testhybridfunc = "testhybrid()"
+        
         ///Native -> JS Call
-        webView.evaluateJavaScript("testhybrid()", completionHandler: {(result, error) in
+        webView.evaluateJavaScript(testhybridfunc, completionHandler: {(result, error) in
             if let result = result {
                 print(result)
             }
@@ -93,7 +96,6 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
     }
     
     @IBAction func jscallparambutton(_ sender: UIButton) {
-        /// Native -> JS Call (Param)
         //Parameter Setting//
         let name : String = "seochangwook"
         let age : Int = 28
@@ -102,6 +104,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
         /// Javascript Function Setting
         let testhybridparamfunc = "testhybridparam('\(name)', '\(age)', '\(address)')"
         
+        /// Native -> JS Call (Param)
         webView.evaluateJavaScript(testhybridparamfunc, completionHandler: {(result, error) in
             if let result = result {
                 print(result)
