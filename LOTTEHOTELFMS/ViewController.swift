@@ -13,25 +13,19 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     @IBOutlet weak var webView: WKWebView!
     
-    override func loadView() {
-        super.loadView()
-        
-        print("loadView Call")
-        
-        webView.uiDelegate = self
-        webView.navigationDelegate = self
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("viewDidLoad Call")
         
         //WKWebview 셋팅
-        let url = URL(string: "https://www.naver.com/")
+        let url = URL(string: "http://172.30.1.8:8080/prototype/main.do")
         let request = URLRequest(url: url!)
         
         webView.load(request)
+        
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -45,23 +39,31 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     @IBAction func backbutton(_ sender: UIButton) {
-        print("back button click")
-        
-        webView.goBack()
-        webView.reload()
+        if(webView.canGoBack){
+            webView.goBack()
+        } else{
+            print("no back page")
+        }
     }
     
     @IBAction func forwardbutton(_ sender: UIButton) {
-        print("forward button click")
-        
-        webView.goForward()
-        webView.reload()
+        if(webView.canGoForward){
+            webView.goForward()
+        } else{
+            print("no forward page")
+        }
     }
     
     @IBAction func refreshbutton(_ sender: UIButton) {
-        print("refresh button click")
+        print("refresh page")
         
         webView.reload()
+    }
+    
+    @IBAction func homebutton(_ sender: UIButton) {
+        print("home page reload")
+        
+        webView.load(URLRequest(url: URL(string: "http://172.30.1.8:8080/prototype/main.do")!))
     }
     
     // -- WKUIDelegate 3가지 필수 함수 -- //
