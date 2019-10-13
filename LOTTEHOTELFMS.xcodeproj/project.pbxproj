@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA7A42D72351F93800760032 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7A42D62351F93800760032 /* WebKit.framework */; };
 		AAFBE78C2346E78C00676A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBE78B2346E78C00676A20 /* AppDelegate.swift */; };
 		AAFBE78E2346E78C00676A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBE78D2346E78C00676A20 /* SceneDelegate.swift */; };
 		AAFBE7902346E78C00676A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBE78F2346E78C00676A20 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA7A42D62351F93800760032 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		AAFBE7882346E78C00676A20 /* LOTTEHOTELFMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTTEHOTELFMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFBE78B2346E78C00676A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFBE78D2346E78C00676A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7A42D72351F93800760032 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA7A42D52351F93800760032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA7A42D62351F93800760032 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAFBE77F2346E78C00676A20 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +94,7 @@
 				AAFBE7A12346E78E00676A20 /* LOTTEHOTELFMSTests */,
 				AAFBE7AC2346E78E00676A20 /* LOTTEHOTELFMSUITests */,
 				AAFBE7892346E78C00676A20 /* Products */,
+				AA7A42D52351F93800760032 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -434,9 +446,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SQL894E3T;
 				INFOPLIST_FILE = LOTTEHOTELFMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +466,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SQL894E3T;
 				INFOPLIST_FILE = LOTTEHOTELFMS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
