@@ -19,7 +19,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         print("viewDidLoad Call")
         
         //WKWebview 셋팅
-        let url = URL(string: "http://172.30.1.8:8080/prototype/main.do")
+        let url = URL(string: "http://192.168.0.12:8080/prototype/main.do")
         let request = URLRequest(url: url!)
         
         webView.load(request)
@@ -32,6 +32,23 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         super.viewDidAppear(true)
         
         print("viewDidAppear Call")
+        
+        //Network의 Check는 viewDidAppear에서 수행
+        if Reachability.isConnectedToNetwork(){
+            print("Network Connect")
+        } else{
+            print("Network Not Connect")
+            
+            let networkCheckAlert = UIAlertController(title: "Network ERROR", message: "앱을 종료합니다.", preferredStyle: UIAlertController.Style.alert)
+            
+            networkCheckAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                print("App exit")
+                
+                exit(0)
+            }))
+            
+            present(networkCheckAlert, animated: true, completion: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {
