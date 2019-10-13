@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate{
     
     @IBOutlet weak var webView: WKWebView!
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         
         print("viewDidAppear Call")
         
-        //Network의 Check는 viewDidAppear에서 수행
+        ///Alert를 사용한 Network의 Check는 viewDidAppear에서 수행
         if Reachability.isConnectedToNetwork(){
             print("Network Connect")
         } else{
@@ -81,6 +81,32 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         print("home page reload")
         
         webView.load(URLRequest(url: URL(string: "http://172.30.1.8:8080/prototype/main.do")!))
+    }
+    
+    @IBAction func jscallbutton(_ sender: UIButton) {
+        ///Native -> JS Call
+        webView.evaluateJavaScript("testhybrid()", completionHandler: {(result, error) in
+            if let result = result {
+                print(result)
+            }
+        })
+    }
+    
+    @IBAction func jscallparambutton(_ sender: UIButton) {
+        /// Native -> JS Call (Param)
+        //Parameter Setting//
+        let name : String = "seochangwook"
+        let age : Int = 28
+        let address : String = "경기도 수원시"
+        
+        /// Javascript Function Setting
+        let testhybridparamfunc = "testhybridparam('\(name)', '\(age)', '\(address)')"
+        
+        webView.evaluateJavaScript(testhybridparamfunc, completionHandler: {(result, error) in
+            if let result = result {
+                print(result)
+            }
+        })
     }
     
     // -- WKUIDelegate 3가지 필수 함수 -- //
