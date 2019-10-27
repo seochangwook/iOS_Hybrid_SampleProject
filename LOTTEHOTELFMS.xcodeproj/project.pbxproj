@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AA7A42D72351F93800760032 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7A42D62351F93800760032 /* WebKit.framework */; };
-		AA7A42DB2352BF4E00760032 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A42DA2352BF4E00760032 /* ViewController.swift */; };
+		AA7A42DB2352BF4E00760032 /* MainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A42DA2352BF4E00760032 /* MainWebViewController.swift */; };
 		AA7A42DD2352F8B300760032 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7A42DC2352F8B300760032 /* Reachability.swift */; };
+		AA92DFEB2365CA9E00AFC386 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92DFEA2365CA9E00AFC386 /* LoadingViewController.swift */; };
+		AA92DFED2365CF0D00AFC386 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92DFEC2365CF0D00AFC386 /* SettingViewController.swift */; };
 		AAFBE78C2346E78C00676A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBE78B2346E78C00676A20 /* AppDelegate.swift */; };
 		AAFBE78E2346E78C00676A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFBE78D2346E78C00676A20 /* SceneDelegate.swift */; };
 		AAFBE7932346E78C00676A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFBE7912346E78C00676A20 /* Main.storyboard */; };
@@ -38,8 +40,10 @@
 
 /* Begin PBXFileReference section */
 		AA7A42D62351F93800760032 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		AA7A42DA2352BF4E00760032 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA7A42DA2352BF4E00760032 /* MainWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWebViewController.swift; sourceTree = "<group>"; };
 		AA7A42DC2352F8B300760032 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		AA92DFEA2365CA9E00AFC386 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		AA92DFEC2365CF0D00AFC386 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		AAFBE7882346E78C00676A20 /* LOTTEHOTELFMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTTEHOTELFMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFBE78B2346E78C00676A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAFBE78D2346E78C00676A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,12 +119,14 @@
 			children = (
 				AAFBE78B2346E78C00676A20 /* AppDelegate.swift */,
 				AAFBE78D2346E78C00676A20 /* SceneDelegate.swift */,
-				AA7A42DA2352BF4E00760032 /* ViewController.swift */,
+				AA7A42DA2352BF4E00760032 /* MainWebViewController.swift */,
 				AAFBE7912346E78C00676A20 /* Main.storyboard */,
 				AAFBE7942346E78D00676A20 /* Assets.xcassets */,
 				AAFBE7962346E78D00676A20 /* LaunchScreen.storyboard */,
 				AAFBE7992346E78D00676A20 /* Info.plist */,
 				AA7A42DC2352F8B300760032 /* Reachability.swift */,
+				AA92DFEA2365CA9E00AFC386 /* LoadingViewController.swift */,
+				AA92DFEC2365CF0D00AFC386 /* SettingViewController.swift */,
 			);
 			path = LOTTEHOTELFMS;
 			sourceTree = "<group>";
@@ -274,10 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA7A42DB2352BF4E00760032 /* ViewController.swift in Sources */,
+				AA7A42DB2352BF4E00760032 /* MainWebViewController.swift in Sources */,
 				AAFBE78C2346E78C00676A20 /* AppDelegate.swift in Sources */,
 				AA7A42DD2352F8B300760032 /* Reachability.swift in Sources */,
 				AAFBE78E2346E78C00676A20 /* SceneDelegate.swift in Sources */,
+				AA92DFEB2365CA9E00AFC386 /* LoadingViewController.swift in Sources */,
+				AA92DFED2365CF0D00AFC386 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

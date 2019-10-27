@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler{
+class MainWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler{
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var outputtext: UILabel!
     
@@ -59,7 +59,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
     @IBAction func homebutton(_ sender: UIButton) {
         print("home page reload")
         
-        webView.load(URLRequest(url: URL(string: "http://172.30.1.7:8080/prototype/main.do")!))
+        webView.load(URLRequest(url: URL(string: "http://172.30.1.52:8080/prototype/main.do")!))
     }
     
     @IBAction func jscallbutton(_ sender: UIButton) {
@@ -90,7 +90,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
             }
         })
     }
-    
+
     func initWebview_then_callFromJs(){
         ///Javascript Call Function Controller
         let contentController = WKUserContentController()
@@ -108,7 +108,7 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
         view.addSubview(webView)
         
         ///WKWebview 셋팅
-        let url = URL(string: "http://172.30.1.7:8080/prototype/main.do")
+        let url = URL(string: "http://172.30.1.52:8080/prototype/main.do")
         let request = URLRequest(url: url!)
             
         webView.load(request)
